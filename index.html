@@ -1,69 +1,73 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | BioCodeEthics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      body {
+        padding-top: 70px;
+      }
+    </style>
   </head>
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-  </body>
-
-
-
-  <nav class="navbar navbar-expand-lg fixed-top text-uppercase">
-    <div class="container">
-      <a class="navbar-brand font-weight-bold" href="#">Logo</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-          <a class="nav-link active px-lg-4" href="#">Home</a>
-          <a class="nav-link active px-lg-4" href="#">Simulator</a>
-          <a class="nav-link active px-lg-4" href="#">Forum</a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light text-uppercase">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">BioCodeEthics</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link active px-lg-4" href="./index.html">Home</a>
+            <a class="nav-link px-lg-4" href="./simulator.html">Simulator</a>
+            <a class="nav-link px-lg-4" href="./forum.html">Forum</a>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <div class="container">
-    <div class="row mt-5 pt-5">
-      <div class="col-md-12 text-center">
+    <!-- Welcome Section -->
+    <div class="container mt-5">
+      <div class="bg-white p-4 border rounded shadow-sm text-center">
         <h1 class="display-4">Welcome to BioCodeEthics</h1>
         <p class="lead">Exploring the ethical dimensions of genetic engineering and biotechnology.</p>
       </div>
     </div>
-    
-    <div class="row mt-5">
-      <div class="col-md-4">
-        <h2>Home</h2>
-        <p>BioCodeEthics is dedicated to fostering discussions around the ethical implications of genetic engineering and biotechnology. We aim to provide resources, forums, and tools for individuals interested in these fields.</p>
-      </div>
-      <div class="col-md-4">
-        <h2>Gene Simulator</h2>
-        <p>Our Gene Simulator allows users to experiment with genetic sequences and understand the potential impacts of genetic modifications. Dive into the world of synthetic biology!</p>
-      </div>
-      <div class="col-md-4">
-        <h2>Forum</h2>
-        <p>Engage with a community of like-minded individuals. Share your thoughts, ask questions, and participate in discussions about bioethics and biotechnology.</p>
+
+    <!-- Features Overview -->
+    <div class="container mt-5">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="bg-light p-4 rounded shadow-sm h-100">
+            <h2 class="h4">🏠 Home</h2>
+            <p>BioCodeEthics is dedicated to fostering discussions around the ethical implications of genetic engineering and biotechnology. We provide educational resources, forums, and interactive tools to empower curious minds.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4 mt-md-0">
+          <div class="bg-light p-4 rounded shadow-sm h-100">
+            <h2 class="h4">🧬 Gene Simulator</h2>
+            <p>Experiment with synthetic DNA using our CRISPR simulator. Learn how genetic edits are made and visualize the process of sequence editing step by step.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4 mt-md-0">
+          <div class="bg-light p-4 rounded shadow-sm h-100">
+            <h2 class="h4">💬 Forum</h2>
+            <p>Join a growing community passionate about bioethics. Ask questions, share ideas, and participate in thoughtful discussions about science and society.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
+    <!-- Footer -->
+    <footer class="text-center mt-5 py-3 bg-light">
+      <p>&copy; 2025 BioCodeEthics</p>
+    </footer>
 
-
-
-
-<footer>
-    <p>&copy; 2025 BioCodeEthics </p>
-</footer>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
-
-
