@@ -1,16 +1,18 @@
-nav{
-    background-color: rgb(220, 144, 194);
+nav, .navbar {
+    background-color: #004059 !important; /* Force the navbar background color */
     color: white;
     padding: 10px;
     text-align: center;
 }
-nav a{
-    color: white;
+
+nav a, .navbar a {
+    color: white !important; /* Ensure navbar links are white */
     text-decoration: none;
     padding: 10px;
 }
-nav a:hover{
-    background-color: rgb(78, 113, 249);
+
+nav a:hover, .navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight hover effect */
 }
 
 body {
@@ -53,7 +55,7 @@ footer p{
   background-size: cover;
   background-position: center;
   color: white;
-  padding: 100px 20px; /* Increased padding for more vertical space */
+  padding: 150px 20px 100px; /* Increased padding-top for more white space */
   min-height: 400px; /* Ensures a taller box */
   display: flex; /* Enables flexbox */
   flex-direction: column; /* Aligns items vertically */
@@ -68,5 +70,13 @@ footer p{
 
 .welcome-section p {
   font-size: 1.25rem; /* Adjust as needed */
+}
+
+h2, p {
+    color: #004059 !important; /* Force text color to #004059 */
+}
+
+p {
+    text-align: left; /* Align all paragraph text to the left */
 }
 
