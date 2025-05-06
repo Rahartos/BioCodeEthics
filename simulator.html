@@ -3,9 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CRISPR Simulator | BioCodeEthics</title>
+    <title>Home | BioCodeEthics</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <style>
+
       body {
         padding-top: 70px;
       }
@@ -41,8 +44,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link px-lg-4" href="./index.html">Home</a>
-            <a class="nav-link px-lg-4 active" href="./simulator.html">Simulator</a>
+            <a class="nav-link active px-lg-4" href="./index.html">Home</a>
+            <a class="nav-link px-lg-4" href="./simulator.html">Simulator</a>
+            <a class="nav-link px-lg-4" href="./legislature.html">Legislature</a>
             <a class="nav-link px-lg-4" href="./forum.html">Forum</a>
           </div>
         </div>
@@ -97,6 +101,73 @@
             <p class="mt-4"><strong>Edited DNA:</strong></p>
             <div class="dna-segment" id="editedVisual"></div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Genetic Disorders Content -->
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Common Genetic Disorders</h2>
+      <ul class="nav nav-tabs" id="geneticDisordersTabs" role="tablist">
+        <!-- Tab Links -->
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="sickle-cell-tab" data-bs-toggle="tab" data-bs-target="#sickle-cell" type="button" role="tab" aria-controls="sickle-cell" aria-selected="true">
+            Sickle Cell Anemia
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="cystic-fibrosis-tab" data-bs-toggle="tab" data-bs-target="#cystic-fibrosis" type="button" role="tab" aria-controls="cystic-fibrosis" aria-selected="false">
+            Cystic Fibrosis
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="huntingtons-tab" data-bs-toggle="tab" data-bs-target="#huntingtons" type="button" role="tab" aria-controls="huntingtons" aria-selected="false">
+            Huntington's Disease
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tay-sachs-tab" data-bs-toggle="tab" data-bs-target="#tay-sachs" type="button" role="tab" aria-controls="tay-sachs" aria-selected="false">
+            Tay-Sachs Disease
+          </button>
+        </li>
+      </ul>
+
+      <!-- Tab Content -->
+      <div class="tab-content mt-4" id="geneticDisordersTabsContent">
+        <!-- Sickle Cell Anemia -->
+        <div class="tab-pane fade show active" id="sickle-cell" role="tabpanel" aria-labelledby="sickle-cell-tab">
+          <strong>Gene:</strong> HBB (Beta-globin gene)<br>
+          <strong>Mutation:</strong> A single nucleotide substitution (GAG → GTG)<br>
+          <strong>Wild Type:</strong> GTG CAC CTG ACT CCT <u>GAG</u> GAG<br>
+          <strong>Mutant:</strong> GTG CAC CTG ACT CCT <u>GTG</u> GAG<br>
+          <strong>Effect:</strong> Glutamic acid (GAG) → Valine (GTG)
+        </div>
+
+        <!-- Cystic Fibrosis -->
+        <div class="tab-pane fade" id="cystic-fibrosis" role="tabpanel" aria-labelledby="cystic-fibrosis-tab">
+          <strong>Gene:</strong> CFTR<br>
+          <strong>Mutation:</strong> ΔF508 — deletion of 3 nucleotides<br>
+          <strong>Normal:</strong> ATC ATC <u>TTT</u> GGT GTT<br>
+          <strong>Mutant:</strong> ATC ATC ___ GGT GTT<br>
+          <strong>Effect:</strong> Loss of phenylalanine at position 508
+        </div>
+
+        <!-- Huntington's Disease -->
+        <div class="tab-pane fade" id="huntingtons" role="tabpanel" aria-labelledby="huntingtons-tab">
+          <strong>Gene:</strong> HTT<br>
+          <strong>Mutation:</strong> Trinucleotide repeat (CAG)<br>
+          <strong>Normal:</strong> ...CAG CAG CAG... (≤35 repeats)<br>
+          <strong>Mutant:</strong> ...CAG CAG CAG CAG CAG... (≥36 repeats)<br>
+          <strong>Effect:</strong> Protein misfolding due to repeat expansion
+        </div>
+
+        <!-- Tay-Sachs Disease -->
+        <div class="tab-pane fade" id="tay-sachs" role="tabpanel" aria-labelledby="tay-sachs-tab">
+          <strong>Gene:</strong> HEXA<br>
+          <strong>Mutation:</strong> 4 bp insertion (TATC) in exon 11<br>
+          <strong>Normal:</strong> ...CTG GGT GAG...<br>
+          <strong>Mutant:</strong> ...CTG <u>TATC</u> GGT GAG...<br>
+          <strong>Effect:</strong> Frameshift causing early stop codon
         </div>
       </div>
     </div>
