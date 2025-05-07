@@ -80,3 +80,15 @@ p {
     text-align: left; /* Align all paragraph text to the left */
 }
 
+.btn-custom {
+    background-color: #004059; /* Set background color to #004059 */
+    color: white; /* Set text color to white */
+    border: none; /* Remove border */
+    font-weight: bold; /* Make text bold */
+}
+
+.btn-custom:hover {
+    background-color: #003347; /* Slightly darker shade for hover effect */
+    color: white; /* Keep text color white */
+}
+
