@@ -94,10 +94,9 @@
 
 <!-- Ethical Concerns Section -->
 <div class="container mt-5">
-  <div class="bg-white p-4 border rounded shadow-sm" style="padding-bottom: 0;">
+  <div class="bg-white p-4 border rounded shadow-sm">
     <h2 class="h4 mb-3">Ethical Considerations</h2>
-    <p>Below is a comprehensive exploration of the ethical considerations surrounding gene editing, categorized into three primary domains: Food, Animals, and Humans. Each section delves into the benefits and concerns, providing possible insights into each of the areas.</p>
-    <ul class="nav nav-tabs" id="ethicalConcernsTabs" role="tablist">
+    <p>Below is a comprehensive exploration of the ethical considerations surrounding gene editing, categorized into three primary domains: Food, Animals, and Humans. Each section delves into the benefits and concerns, providing possible insights into each of the areas.</p>    <ul class="nav nav-tabs" id="ethicalConcernsTabs" role="tablist">
       <!-- Food Tab -->
       <li class="nav-item" role="presentation">
         <button class="nav-link active" id="food-tab" data-bs-toggle="tab" data-bs-target="#food" type="button" role="tab" aria-controls="food" aria-selected="true">
@@ -301,156 +300,513 @@
               </div>
             </div>
           </div>
-      
-        <!-- Risks/Opposition Box (Right) -->
-        <div class="col-md-6">
-          <div class="bg-danger bg-opacity-10 p-4 border rounded shadow-sm h-100 sticky-top" style="top: 70px;">
-            <h2 class="h5 text-danger">Concerns</h2>
-            <div class="accordion" id="foodConcernsAccordion">
-              <!-- Unintended Genetic Consequences -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingUnintendedGeneticConsequences">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUnintendedGeneticConsequences" aria-expanded="false" aria-controls="collapseUnintendedGeneticConsequences">
-                    Unintended Genetic Consequences
-                  </button>
-                </h2>
-                <div id="collapseUnintendedGeneticConsequences" class="accordion-collapse collapse" aria-labelledby="headingUnintendedGeneticConsequences" data-bs-parent="#foodConcernsAccordion">
-                  <div class="accordion-body">
-                    Gene editing tools like CRISPR, while precise, can lead to unintended genetic changes. These off-target effects may result in unforeseen traits in crops, raising concerns about the safety and long-term impacts of consuming such foods. Ensuring thorough assessments is crucial to address these potential risks.
-                    <p class="text-muted mt-2" style="font-size: 0.875rem;">
-                      Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7129066/" target="_blank" rel="noopener">Bioethical issues in genome editing by CRISPR-Cas9 technology</a>
-                    </p>
+        
+          <!-- Risks/Opposition Box (Right) -->
+          <div class="col-md-6">
+            <div class="bg-danger bg-opacity-10 p-4 border rounded shadow-sm h-100 sticky-top" style="top: 70px;">
+              <h2 class="h5 text-danger">Concerns</h2>
+              <div class="accordion" id="foodConcernsAccordion">
+                <!-- Unintended Genetic Consequences -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingUnintendedGeneticConsequences">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUnintendedGeneticConsequences" aria-expanded="false" aria-controls="collapseUnintendedGeneticConsequences">
+                      Unintended Genetic Consequences
+                    </button>
+                  </h2>
+                  <div id="collapseUnintendedGeneticConsequences" class="accordion-collapse collapse" aria-labelledby="headingUnintendedGeneticConsequences" data-bs-parent="#foodConcernsAccordion">
+                    <div class="accordion-body">
+                      Gene editing tools like CRISPR, while precise, can lead to unintended genetic changes. These off-target effects may result in unforeseen traits in crops, raising concerns about the safety and long-term impacts of consuming such foods. Ensuring thorough assessments is crucial to address these potential risks.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7129066/" target="_blank" rel="noopener">Bioethical issues in genome editing by CRISPR-Cas9 technology</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Corporate Control and Farmer Dependency -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingCorporateControl">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCorporateControl" aria-expanded="false" aria-controls="collapseCorporateControl">
+                      Corporate Control and Farmer Dependency
+                    </button>
+                  </h2>
+                  <div id="collapseCorporateControl" class="accordion-collapse collapse" aria-labelledby="headingCorporateControl" data-bs-parent="#foodConcernsAccordion">
+                    <div class="accordion-body">
+                      The patenting of gene-edited seeds by large corporations can lead to monopolies, making farmers dependent on purchasing new seeds each season. This dynamic raises ethical concerns about the autonomy of farmers and the potential marginalization of small-scale agricultural producers.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://prism.sustainability-directory.com/scenario/ethical-implications-of-gene-editing-in-agriculture-for-food-security/" target="_blank" rel="noopener">Ethical Implications of Gene Editing in Agriculture for Food Security</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Environmental Impact and Biodiversity Loss -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingEnvironmentalImpact">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEnvironmentalImpact" aria-expanded="false" aria-controls="collapseEnvironmentalImpact">
+                      Environmental Impact and Biodiversity Loss
+                    </button>
+                  </h2>
+                  <div id="collapseEnvironmentalImpact" class="accordion-collapse collapse" aria-labelledby="headingEnvironmentalImpact" data-bs-parent="#foodConcernsAccordion">
+                    <div class="accordion-body">
+                      Gene-edited crops may inadvertently affect ecosystems, leading to reduced biodiversity. For instance, if such crops crossbreed with wild relatives, it could result in ecological imbalances. The long-term environmental consequences of widespread adoption of such crops are still not fully understood, necessitating cautious implementation.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://www.foodethicscouncil.org/opinion/gene-editing-the-ethical-questions/" target="_blank" rel="noopener">Gene-editing: The ethical questions | Food Ethics Council</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Ethical Concerns Over 'Playing God' -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingPlayingGod">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlayingGod" aria-expanded="false" aria-controls="collapsePlayingGod">
+                      Ethical Concerns Over 'Playing God'
+                    </button>
+                  </h2>
+                  <div id="collapsePlayingGod" class="accordion-collapse collapse" aria-labelledby="headingPlayingGod" data-bs-parent="#foodConcernsAccordion">
+                    <div class="accordion-body">
+                      Altering the genetic makeup of organisms raises philosophical and ethical questions about human intervention in nature. Some argue that gene editing is an overreach, interfering with natural evolutionary processes and potentially leading to unforeseen consequences.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://innovativegenomics.org/crisprpedia/crispr-ethics/" target="_blank" rel="noopener">CRISPR & Ethics - Innovative Genomics Institute (IGI)</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Lack of Informed Consumer Choice -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingConsumerChoice">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConsumerChoice" aria-expanded="false" aria-controls="collapseConsumerChoice">
+                      Lack of Informed Consumer Choice
+                    </button>
+                  </h2>
+                  <div id="collapseConsumerChoice" class="accordion-collapse collapse" aria-labelledby="headingConsumerChoice" data-bs-parent="#foodConcernsAccordion">
+                    <div class="accordion-body">
+                      In many regions, gene-edited foods are not labeled, limiting consumers' ability to make informed choices. This lack of transparency raises ethical issues about consumer rights and the importance of informed consent in food consumption.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://www.foodethicscouncil.org/opinion/gene-editing-the-ethical-questions/" target="_blank" rel="noopener">Gene-editing: The ethical questions | Food Ethics Council</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Potential for Increased Inequality -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingInequality">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInequality" aria-expanded="false" aria-controls="collapseInequality">
+                      Potential for Increased Inequality
+                    </button>
+                  </h2>
+                  <div id="collapseInequality" class="accordion-collapse collapse" aria-labelledby="headingInequality" data-bs-parent="#foodConcernsAccordion">
+                    <div class="accordion-body">
+                      Access to gene-editing technologies is often limited to wealthier nations and corporations, potentially exacerbating global inequalities. This disparity raises ethical concerns about equitable access to technological advancements and the risk of widening the gap between developed and developing countries.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://prism.sustainability-directory.com/scenario/ethical-implications-of-gene-editing-in-agriculture-for-food-security/" target="_blank" rel="noopener">Ethical Implications of Gene Editing in Agriculture for Food Security</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Regulatory Disparities and Trade Issues -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingRegulatoryDisparities">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRegulatoryDisparities" aria-expanded="false" aria-controls="collapseRegulatoryDisparities">
+                      Regulatory Disparities and Trade Issues
+                    </button>
+                  </h2>
+                  <div id="collapseRegulatoryDisparities" class="accordion-collapse collapse" aria-labelledby="headingRegulatoryDisparities" data-bs-parent="#foodConcernsAccordion">
+                    <div class="accordion-body">
+                      Different countries have varying regulations concerning gene-edited foods, leading to trade complications and ethical questions about the harmonization of food safety standards. For example, while some nations embrace gene-edited crops, others maintain strict regulations, affecting international food trade dynamics.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://institute.global/insights/tech-and-digitalisation/gene-editing-food-production-charting-way-forward" target="_blank" rel="noopener">Gene Editing in Food Production: Charting a Way Forward</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Risk of Unintended Health Effects -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingHealthEffects">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHealthEffects" aria-expanded="false" aria-controls="collapseHealthEffects">
+                      Risk of Unintended Health Effects
+                    </button>
+                  </h2>
+                  <div id="collapseHealthEffects" class="accordion-collapse collapse" aria-labelledby="headingHealthEffects" data-bs-parent="#foodConcernsAccordion">
+                    <div class="accordion-body">
+                      While current studies indicate that gene-edited foods are safe for consumption, the long-term health effects remain uncertain. Continuous monitoring and research are necessary to detect any potential adverse effects that might emerge over time.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7129066/" target="_blank" rel="noopener">Bioethical issues in genome editing by CRISPR-Cas9 technology</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+      <!-- Animals Section -->
+          <div class="tab-pane fade" id="animals" role="tabpanel" aria-labelledby="animals-tab">
+            <p><strong>Animals:</strong> Gene editing in animals offers numerous benefits, including improving animal welfare, reducing environmental impact, and advancing human health. However, it also raises ethical concerns about animal rights, ecological balance, and unintended consequences.</p>
+            <div class="row align-items-start">
+              <!-- Benefits Box (Left) -->
+              <div class="col-md-6">
+                <div class="bg-success bg-opacity-10 p-4 border rounded shadow-sm h-100 sticky-top" style="top: 70px;">
+                  <h2 class="h5 text-success">Benefits</h2>
+                  <div class="accordion" id="animalBenefitsAccordion">
+                    <!-- Enhancing Animal Welfare -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingAnimalWelfare">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAnimalWelfare" aria-expanded="false" aria-controls="collapseAnimalWelfare">
+                          Enhancing Animal Welfare by Eliminating Harmful Practices
+                        </button>
+                      </h2>
+                      <div id="collapseAnimalWelfare" class="accordion-collapse collapse" aria-labelledby="headingAnimalWelfare" data-bs-parent="#animalBenefitsAccordion">
+                        <div class="accordion-body">
+                          Gene editing can improve animal welfare by removing the need for painful procedures. For instance, scientists have developed hornless dairy cattle through gene editing, eliminating the need for dehorning—a common but distressing practice in the dairy industry. This advancement promotes more humane livestock management.
+                          <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                            Source: <a href="https://www.wired.com/story/a-cow-a-controversy-and-a-dashed-dream-of-more-humane-farms/" target="_blank" rel="noopener">A Cow, a Controversy, and a Dashed Dream of More Humane Farms</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Preventing Unnecessary Animal Culling -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingAnimalCulling">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAnimalCulling" aria-expanded="false" aria-controls="collapseAnimalCulling">
+                          Preventing Unnecessary Animal Culling
+                        </button>
+                      </h2>
+                      <div id="collapseAnimalCulling" class="accordion-collapse collapse" aria-labelledby="headingAnimalCulling" data-bs-parent="#animalBenefitsAccordion">
+                        <div class="accordion-body">
+                          In the poultry industry, male chicks are often culled shortly after hatching since they don't lay eggs. Gene editing offers a solution by enabling the production of only female chicks, thereby preventing the mass culling of male chicks and addressing significant ethical concerns in animal agriculture.
+                          <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                            Source: <a href="https://en.wikipedia.org/wiki/Genetically_modified_animal" target="_blank" rel="noopener">Genetically modified animal</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Reducing Environmental Impact -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingEnvironmentalImpactAnimals">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEnvironmentalImpactAnimals" aria-expanded="false" aria-controls="collapseEnvironmentalImpactAnimals">
+                          Reducing Environmental Impact
+                        </button>
+                      </h2>
+                      <div id="collapseEnvironmentalImpactAnimals" class="accordion-collapse collapse" aria-labelledby="headingEnvironmentalImpactAnimals" data-bs-parent="#animalBenefitsAccordion">
+                        <div class="accordion-body">
+                          Gene editing can lead to the development of animals with traits that lessen environmental burdens. For example, pigs have been genetically modified to produce less phosphorus in their waste, reducing water pollution and promoting more sustainable farming practices.
+                          <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                            Source: <a href="https://en.wikipedia.org/wiki/Genetically_modified_animal" target="_blank" rel="noopener">Genetically modified animal</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Advancing Human Health Through Xenotransplantation -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingXenotransplantation">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseXenotransplantation" aria-expanded="false" aria-controls="collapseXenotransplantation">
+                          Advancing Human Health Through Xenotransplantation
+                        </button>
+                      </h2>
+                      <div id="collapseXenotransplantation" class="accordion-collapse collapse" aria-labelledby="headingXenotransplantation" data-bs-parent="#animalBenefitsAccordion">
+                        <div class="accordion-body">
+                          Gene-edited pigs are being developed to provide organs for human transplantation, addressing the shortage of human donors. By modifying pig genes to reduce the risk of organ rejection, this approach holds promise for saving human lives while raising important ethical discussions about cross-species organ use.
+                          <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                            Source: <a href="https://en.wikipedia.org/wiki/Xenotransplantation" target="_blank" rel="noopener">Xenotransplantation</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Improving Disease Resistance in Livestock -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingDiseaseResistanceAnimals">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiseaseResistanceAnimals" aria-expanded="false" aria-controls="collapseDiseaseResistanceAnimals">
+                          Improving Disease Resistance in Livestock
+                        </button>
+                      </h2>
+                      <div id="collapseDiseaseResistanceAnimals" class="accordion-collapse collapse" aria-labelledby="headingDiseaseResistanceAnimals" data-bs-parent="#animalBenefitsAccordion">
+                        <div class="accordion-body">
+                          Gene editing can enhance disease resistance in animals, reducing the need for antibiotics and improving overall animal health. For instance, gene-edited pigs have been developed to resist certain viral infections, leading to healthier herds and addressing concerns about antibiotic overuse.
+                          <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                            Source: <a href="https://www.theguardian.com/science/2024/nov/02/scientists-dismayed-as-uk-ministers-clear-way-for-gene-editing-of-crops-but-not-animals" target="_blank" rel="noopener">Scientists dismayed as UK ministers clear way for gene editing of crops - but not animals</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Enhancing Research Models for Human Diseases -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingResearchModels">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseResearchModels" aria-expanded="false" aria-controls="collapseResearchModels">
+                          Enhancing Research Models for Human Diseases
+                        </button>
+                      </h2>
+                      <div id="collapseResearchModels" class="accordion-collapse collapse" aria-labelledby="headingResearchModels" data-bs-parent="#animalBenefitsAccordion">
+                        <div class="accordion-body">
+                          Gene-edited animals serve as valuable models for studying human diseases, enabling researchers to better understand disease mechanisms and develop treatments. This ethical application of gene editing contributes to medical advancements that can benefit both humans and animals.
+                          <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                            Source: <a href="https://en.wikipedia.org/wiki/Genetic_engineering" target="_blank" rel="noopener">Genetic engineering</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Contributing to Conservation Efforts -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingConservation">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConservation" aria-expanded="false" aria-controls="collapseConservation">
+                          Contributing to Conservation Efforts
+                        </button>
+                      </h2>
+                      <div id="collapseConservation" class="accordion-collapse collapse" aria-labelledby="headingConservation" data-bs-parent="#animalBenefitsAccordion">
+                        <div class="accordion-body">
+                          Gene editing holds potential for conservation by helping protect endangered species. For example, genetic modifications can be used to increase disease resistance in vulnerable wildlife populations, supporting biodiversity and ecosystem stability.
+                          <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                            Source: <a href="https://en.wikipedia.org/wiki/Genetically_modified_animal" target="_blank" rel="noopener">Genetically modified animal</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Reducing the Need for Chemical Interventions -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingChemicalInterventions">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChemicalInterventions" aria-expanded="false" aria-controls="collapseChemicalInterventions">
+                          Reducing the Need for Chemical Interventions
+                        </button>
+                      </h2>
+                      <div id="collapseChemicalInterventions" class="accordion-collapse collapse" aria-labelledby="headingChemicalInterventions" data-bs-parent="#animalBenefitsAccordion">
+                        <div class="accordion-body">
+                          By developing animals with enhanced resistance to pests and diseases, gene editing can decrease the reliance on chemical treatments. This reduction benefits the environment and promotes more sustainable agricultural practices.
+                          <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                            Source: <a href="https://en.wikipedia.org/wiki/Genetically_modified_animal" target="_blank" rel="noopener">Genetically modified animal</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Improving Nutritional Content of Animal Products -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingNutritionalContent">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNutritionalContent" aria-expanded="false" aria-controls="collapseNutritionalContent">
+                          Improving Nutritional Content of Animal Products
+                        </button>
+                      </h2>
+                      <div id="collapseNutritionalContent" class="accordion-collapse collapse" aria-labelledby="headingNutritionalContent" data-bs-parent="#animalBenefitsAccordion">
+                        <div class="accordion-body">
+                          Gene editing can be used to enhance the nutritional profile of animal-derived foods. For instance, pigs have been genetically modified to produce meat with healthier fat content, offering potential health benefits to consumers.
+                          <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                            Source: <a href="https://time.com/4995237/crispr-gene-editing-pigs-fat/" target="_blank" rel="noopener">Scientists Created Low-Fat Pigs by Editing Their Genes With CRISPR</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Facilitating Ethical Scientific Research -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingEthicalResearch">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEthicalResearch" aria-expanded="false" aria-controls="collapseEthicalResearch">
+                          Facilitating Ethical Scientific Research
+                        </button>
+                      </h2>
+                      <div id="collapseEthicalResearch" class="accordion-collapse collapse" aria-labelledby="headingEthicalResearch" data-bs-parent="#animalBenefitsAccordion">
+                        <div class="accordion-body">
+                          Gene editing allows for precise modifications in animal genomes, enabling scientists to study specific genes' functions without causing unnecessary harm. This precision supports ethical research practices by minimizing animal suffering and improving the validity of scientific studies.
+                          <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                            Source: <a href="https://www.newyorker.com/magazine/2017/01/02/rewriting-the-code-of-life" target="_blank" rel="noopener">Rewriting the Code of Life</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <!-- Corporate Control and Farmer Dependency -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingCorporateControl">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCorporateControl" aria-expanded="false" aria-controls="collapseCorporateControl">
-                    Corporate Control and Farmer Dependency
-                  </button>
-                </h2>
-                <div id="collapseCorporateControl" class="accordion-collapse collapse" aria-labelledby="headingCorporateControl" data-bs-parent="#foodConcernsAccordion">
-                  <div class="accordion-body">
-                    The patenting of gene-edited seeds by large corporations can lead to monopolies, making farmers dependent on purchasing new seeds each season. This dynamic raises ethical concerns about the autonomy of farmers and the potential marginalization of small-scale agricultural producers.
-                    <p class="text-muted mt-2" style="font-size: 0.875rem;">
-                      Source: <a href="https://prism.sustainability-directory.com/scenario/ethical-implications-of-gene-editing-in-agriculture-for-food-security/" target="_blank" rel="noopener">Ethical Implications of Gene Editing in Agriculture for Food Security</a>
-                    </p>
+              <!-- Concerns Box (Right) -->
+              <div class="col-md-6">
+                <div class="bg-danger bg-opacity-10 p-4 border rounded shadow-sm h-100 sticky-top" style="top: 70px;">
+                  <h2 class="h5 text-danger">Concerns</h2>
+                  <div class="accordion" id="animalConcernsAccordion">
+                <!-- Animal Welfare Risks from Genetic Modifications -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingAnimalWelfareRisks">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAnimalWelfareRisks" aria-expanded="false" aria-controls="collapseAnimalWelfareRisks">
+                      Animal Welfare Risks from Genetic Modifications
+                    </button>
+                  </h2>
+                  <div id="collapseAnimalWelfareRisks" class="accordion-collapse collapse" aria-labelledby="headingAnimalWelfareRisks" data-bs-parent="#animalConcernsAccordion">
+                    <div class="accordion-body">
+                      Gene editing can inadvertently cause health issues in animals. For instance, transgenic pigs engineered for rapid growth have exhibited arthritis, partial blindness, and infertility. Such unintended consequences raise significant ethical concerns about the well-being of genetically modified animals.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://www.labxchange.org/library/items/lb:LabXchange:48de007d:html:1" target="_blank" rel="noopener">Is it Ethical to Genetically Modify Farm Animals for Agriculture?</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Environmental Impact and Biodiversity Loss -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingEnvironmentalImpact">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEnvironmentalImpact" aria-expanded="false" aria-controls="collapseEnvironmentalImpact">
-                    Environmental Impact and Biodiversity Loss
-                  </button>
-                </h2>
-                <div id="collapseEnvironmentalImpact" class="accordion-collapse collapse" aria-labelledby="headingEnvironmentalImpact" data-bs-parent="#foodConcernsAccordion">
-                  <div class="accordion-body">
-                    Gene-edited crops may inadvertently affect ecosystems, leading to reduced biodiversity. For instance, if such crops crossbreed with wild relatives, it could result in ecological imbalances. The long-term environmental consequences of widespread adoption of such crops are still not fully understood, necessitating cautious implementation.
-                    <p class="text-muted mt-2" style="font-size: 0.875rem;">
-                      Source: <a href="https://www.foodethicscouncil.org/opinion/gene-editing-the-ethical-questions/" target="_blank" rel="noopener">Gene-editing: The ethical questions | Food Ethics Council</a>
-                    </p>
+                <!-- Compromise of Animal Integrity -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingAnimalIntegrity">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAnimalIntegrity" aria-expanded="false" aria-controls="collapseAnimalIntegrity">
+                      Compromise of Animal Integrity
+                    </button>
+                  </h2>
+                  <div id="collapseAnimalIntegrity" class="accordion-collapse collapse" aria-labelledby="headingAnimalIntegrity" data-bs-parent="#animalConcernsAccordion">
+                    <div class="accordion-body">
+                      Altering an animal's genetic makeup can be seen as compromising its natural integrity. Critics argue that such interventions may disrespect the animal's inherent nature, raising moral questions about the extent of human interference in animal biology.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://royalsocietypublishing.org/doi/10.1098/rstb.2018.0106" target="_blank" rel="noopener">The ethics of genome editing in non-human animals</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Ethical Concerns Over 'Playing God' -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingPlayingGod">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlayingGod" aria-expanded="false" aria-controls="collapsePlayingGod">
-                    Ethical Concerns Over 'Playing God'
-                  </button>
-                </h2>
-                <div id="collapsePlayingGod" class="accordion-collapse collapse" aria-labelledby="headingPlayingGod" data-bs-parent="#foodConcernsAccordion">
-                  <div class="accordion-body">
-                    Altering the genetic makeup of organisms raises philosophical and ethical questions about human intervention in nature. Some argue that gene editing is an overreach, interfering with natural evolutionary processes and potentially leading to unforeseen consequences.
-                    <p class="text-muted mt-2" style="font-size: 0.875rem;">
-                      Source: <a href="https://innovativegenomics.org/crisprpedia/crispr-ethics/" target="_blank" rel="noopener">CRISPR & Ethics - Innovative Genomics Institute (IGI)</a>
-                    </p>
+                <!-- Unintended Ecological Consequences -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingEcologicalConsequences">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEcologicalConsequences" aria-expanded="false" aria-controls="collapseEcologicalConsequences">
+                      Unintended Ecological Consequences
+                    </button>
+                  </h2>
+                  <div id="collapseEcologicalConsequences" class="accordion-collapse collapse" aria-labelledby="headingEcologicalConsequences" data-bs-parent="#animalConcernsAccordion">
+                    <div class="accordion-body">
+                      Releasing gene-edited animals into the wild could disrupt ecosystems. For example, genetically modified fish might outcompete native species or interbreed, leading to unforeseen environmental impacts.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://en.wikipedia.org/wiki/Genetically_modified_fish" target="_blank" rel="noopener">Genetically modified fish</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Lack of Informed Consumer Choice -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingConsumerChoice">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConsumerChoice" aria-expanded="false" aria-controls="collapseConsumerChoice">
-                    Lack of Informed Consumer Choice
-                  </button>
-                </h2>
-                <div id="collapseConsumerChoice" class="accordion-collapse collapse" aria-labelledby="headingConsumerChoice" data-bs-parent="#foodConcernsAccordion">
-                  <div class="accordion-body">
-                    In many regions, gene-edited foods are not labeled, limiting consumers' ability to make informed choices. This lack of transparency raises ethical issues about consumer rights and the importance of informed consent in food consumption.
-                    <p class="text-muted mt-2" style="font-size: 0.875rem;">
-                      Source: <a href="https://www.foodethicscouncil.org/opinion/gene-editing-the-ethical-questions/" target="_blank" rel="noopener">Gene-editing: The ethical questions | Food Ethics Council</a>
-                    </p>
+                <!-- Ethical Concerns in Wildlife Conservation -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingWildlifeConservation">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWildlifeConservation" aria-expanded="false" aria-controls="collapseWildlifeConservation">
+                      Ethical Concerns in Wildlife Conservation
+                    </button>
+                  </h2>
+                  <div id="collapseWildlifeConservation" class="accordion-collapse collapse" aria-labelledby="headingWildlifeConservation" data-bs-parent="#animalConcernsAccordion">
+                    <div class="accordion-body">
+                      Using gene editing for wildlife conservation, such as reviving extinct species, poses ethical dilemmas. Questions arise about the authenticity of de-extinct species and the potential neglect of existing endangered animals.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://consensus.app/questions/what-ethics-gene-editing-wildlife-conservation/" target="_blank" rel="noopener">What Are The Ethics Of Gene Editing In Wildlife Conservation?</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Potential for Increased Inequality -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingInequality">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInequality" aria-expanded="false" aria-controls="collapseInequality">
-                    Potential for Increased Inequality
-                  </button>
-                </h2>
-                <div id="collapseInequality" class="accordion-collapse collapse" aria-labelledby="headingInequality" data-bs-parent="#foodConcernsAccordion">
-                  <div class="accordion-body">
-                    Access to gene-editing technologies is often limited to wealthier nations and corporations, potentially exacerbating global inequalities. This disparity raises ethical concerns about equitable access to technological advancements and the risk of widening the gap between developed and developing countries.
-                    <p class="text-muted mt-2" style="font-size: 0.875rem;">
-                      Source: <a href="https://prism.sustainability-directory.com/scenario/ethical-implications-of-gene-editing-in-agriculture-for-food-security/" target="_blank" rel="noopener">Ethical Implications of Gene Editing in Agriculture for Food Security</a>
-                    </p>
+                <!-- Potential for Increased Suffering -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingIncreasedSuffering">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIncreasedSuffering" aria-expanded="false" aria-controls="collapseIncreasedSuffering">
+                      Potential for Increased Suffering
+                    </button>
+                  </h2>
+                  <div id="collapseIncreasedSuffering" class="accordion-collapse collapse" aria-labelledby="headingIncreasedSuffering" data-bs-parent="#animalConcernsAccordion">
+                    <div class="accordion-body">
+                      Some gene editing practices aim to reduce animals' capacity to feel pain, known as "disenhancement." While intended to improve welfare, this raises ethical issues about creating animals with diminished capacities and the implications for their quality of life.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://en.wikipedia.org/wiki/Animal_disenhancement" target="_blank" rel="noopener">Animal disenhancement</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Regulatory Disparities and Trade Issues -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingRegulatoryDisparities">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRegulatoryDisparities" aria-expanded="false" aria-controls="collapseRegulatoryDisparities">
-                    Regulatory Disparities and Trade Issues
-                  </button>
-                </h2>
-                <div id="collapseRegulatoryDisparities" class="accordion-collapse collapse" aria-labelledby="headingRegulatoryDisparities" data-bs-parent="#foodConcernsAccordion">
-                  <div class="accordion-body">
-                    Different countries have varying regulations concerning gene-edited foods, leading to trade complications and ethical questions about the harmonization of food safety standards. For example, while some nations embrace gene-edited crops, others maintain strict regulations, affecting international food trade dynamics.
-                    <p class="text-muted mt-2" style="font-size: 0.875rem;">
-                      Source: <a href="https://institute.global/insights/tech-and-digitalisation/gene-editing-food-production-charting-way-forward" target="_blank" rel="noopener">Gene Editing in Food Production: Charting a Way Forward</a>
-                    </p>
+                <!-- Public Distrust and Ethical Transparency -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingPublicDistrust">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePublicDistrust" aria-expanded="false" aria-controls="collapsePublicDistrust">
+                      Public Distrust and Ethical Transparency
+                    </button>
+                  </h2>
+                  <div id="collapsePublicDistrust" class="accordion-collapse collapse" aria-labelledby="headingPublicDistrust" data-bs-parent="#animalConcernsAccordion">
+                    <div class="accordion-body">
+                      The public often harbors skepticism toward gene editing in animals, especially when transparency is lacking. Ethical concerns intensify when there's insufficient public engagement or disclosure about gene editing practices.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://journals.sagepub.com/doi/full/10.1177/09636625241227091" target="_blank" rel="noopener">Gene editing in animals: What does the public want to know and discuss?</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Risk of Unintended Health Effects -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingHealthEffects">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHealthEffects" aria-expanded="false" aria-controls="collapseHealthEffects">
-                    Risk of Unintended Health Effects
-                  </button>
-                </h2>
-                <div id="collapseHealthEffects" class="accordion-collapse collapse" aria-labelledby="headingHealthEffects" data-bs-parent="#foodConcernsAccordion">
-                  <div class="accordion-body">
-                    While current studies indicate that gene-edited foods are safe for consumption, the long-term health effects remain uncertain. Continuous monitoring and research are necessary to detect any potential adverse effects that might emerge over time.
-                    <p class="text-muted mt-2" style="font-size: 0.875rem;">
-                      Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7129066/" target="_blank" rel="noopener">Bioethical issues in genome editing by CRISPR-Cas9 technology</a>
-                    </p>
+                <!-- Regulatory and Oversight Challenges -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingRegulatoryChallenges">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRegulatoryChallenges" aria-expanded="false" aria-controls="collapseRegulatoryChallenges">
+                      Regulatory and Oversight Challenges
+                    </button>
+                  </h2>
+                  <div id="collapseRegulatoryChallenges" class="accordion-collapse collapse" aria-labelledby="headingRegulatoryChallenges" data-bs-parent="#animalConcernsAccordion">
+                    <div class="accordion-body">
+                      The rapid advancement of gene editing technologies outpaces existing regulatory frameworks. This gap can lead to ethical concerns about the adequacy of oversight in ensuring animal welfare and safety.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://innovativegenomics.org/crisprpedia/crispr-ethics/" target="_blank" rel="noopener">CRISPR & Ethics - Innovative Genomics Institute (IGI)</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Commercial Exploitation Risks -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingCommercialExploitation">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCommercialExploitation" aria-expanded="false" aria-controls="collapseCommercialExploitation">
+                      Commercial Exploitation Risks
+                    </button>
+                  </h2>
+                  <div id="collapseCommercialExploitation" class="accordion-collapse collapse" aria-labelledby="headingCommercialExploitation" data-bs-parent="#animalConcernsAccordion">
+                    <div class="accordion-body">
+                      There's a risk that gene editing could be used primarily for commercial gain, potentially at the expense of animal welfare. For instance, creating animals with traits desirable for production may overlook the ethical implications for the animals themselves.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3078015/" target="_blank" rel="noopener">Genetic engineering of animals: Ethical issues, including welfare</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Moral Status and Rights of Modified Animals -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingMoralStatus">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMoralStatus" aria-expanded="false" aria-controls="collapseMoralStatus">
+                      Moral Status and Rights of Modified Animals
+                    </button>
+                  </h2>
+                  <div id="collapseMoralStatus" class="accordion-collapse collapse" aria-labelledby="headingMoralStatus" data-bs-parent="#animalConcernsAccordion">
+                    <div class="accordion-body">
+                      As gene editing blurs the lines between species, questions arise about the moral status and rights of genetically modified animals. Determining the ethical treatment and consideration these animals deserve becomes increasingly complex.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://www.nuffieldbioethics.org/publication/genome-editing-and-farmed-animal-breeding-social-and-ethical-issues/" target="_blank" rel="noopener">Genome editing and farmed animal breeding: social and ethical issues</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+      <!-- Potential Misuse in Non-Agricultural Contexts -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingNonAgriculturalMisuse">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNonAgriculturalMisuse" aria-expanded="false" aria-controls="collapseNonAgriculturalMisuse">
+                      Potential Misuse in Non-Agricultural Contexts
+                    </button>
+                  </h2>
+                  <div id="collapseNonAgriculturalMisuse" class="accordion-collapse collapse" aria-labelledby="headingNonAgriculturalMisuse" data-bs-parent="#animalConcernsAccordion">
+                    <div class="accordion-body">
+                      Gene editing technologies could be misapplied in contexts beyond agriculture, such as creating exotic pets with altered traits. Such uses raise ethical concerns about the motivations behind genetic modifications and the welfare of the resulting animals.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://www.wired.com/story/your-next-pet-could-be-a-glowing-rabbit-los-angeles-project-gene-editing-crispr/" target="_blank" rel="noopener">Your Next Pet Could Be a Glowing Rabbit</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      
-      </div>
-
-      <!-- Animals Section -->
-      <div class="tab-pane fade" id="animals" role="tabpanel" aria-labelledby="animals-tab">
-        <p><strong>Animals:</strong> Editing animal genomes for agriculture or research purposes raises concerns about animal welfare, ecological balance, and unintended consequences. Ethical debates focus on whether the benefits justify the potential harm to animals and ecosystems.</p>
       </div>
 
       <!-- Humans Section -->
