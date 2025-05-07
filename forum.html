@@ -8,8 +8,22 @@
     <link rel="stylesheet" href="./styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <style>
-      body {
-        padding-top: 70px;
+      body { padding-top: 70px; }
+      .forum-header {
+        background-image: url('./Images/GeneBackground.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+      }
+      .post-author {
+        font-size: 0.9em;
+        color: #888;
+      }
+      .post-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        margin-bottom: 1.5rem;
       }
     </style>
   </head>
@@ -32,133 +46,147 @@
       </div>
     </nav>
 
-    <!-- Header -->
-    <div class="container mt-5">
-      <div class="bg-white p-4 border rounded shadow-sm text-center">
-        <h1 class="display-4">Welcome to the BioCodeEthics Forum</h1>
-        <p class="lead">Share your thoughts and questions about bioethics and gene editing.</p>
+    <!-- Forum Header -->
+    <header class="forum-header text-center py-5 mb-4">
+      <div class="container">
+        <h1 class="display-4">BioCodeEthics Forum</h1>
+        <p class="lead">Share your thoughts, questions, and ideas about gene editing-anonymously.</p>
       </div>
-    </div>
+    </header>
 
-    <!-- Forum Description -->
-    <div class="container mt-5">
+    <!-- Board Selector -->
+    <div class="container mb-4">
       <div class="row justify-content-center">
-        <div class="col-md-10 col-lg-8">
+        <div class="col-md-8">
+          <div class="bg-light p-3 rounded shadow-sm mb-2">
+            <label for="boardSelect" class="form-label mb-1">Choose a Discussion Board:</label>
+            <select class="form-select" id="boardSelect">
+              <option value="general">General</option>
+              <option value="ethics">Ethics & Society</option>
+              <option value="technology">Technology & Science</option>
+              <option value="medicine">Medical Applications</option>
+              <option value="future">The Future</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forum Post Form -->
+    <div class="container mb-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
           <div class="bg-light p-4 rounded shadow-sm">
-            <h2 class="h4 mb-3">💬 Forum Overview</h2>
-            <p>
-              Join our growing community to discuss the scientific, social, and ethical aspects of CRISPR and genetic engineering. Whether you're a curious beginner or a seasoned biologist, your voice matters here.
-            </p>
-            <p>
-              Topics range from real-world CRISPR applications to hypothetical dilemmas and future technologies. Contribute your perspective and learn from others!
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-<!-- Discussion Categories -->
-<div class="container mt-5">
-  <div class="row g-4">
-    <div class="col-md-4">
-      <div class="card h-100 border-primary">
-        <div class="card-body">
-          <h3 class="h5 card-title">🧬 Technical Discussions</h3>
-          <p class="card-text">
-            CRISPR mechanisms, delivery methods, and technical challenges
-          </p>
-          <span class="badge bg-primary rounded-pill">12 Active Threads</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card h-100 border-success">
-        <div class="card-body">
-          <h3 class="h5 card-title">⚖️ Ethical Debates</h3>
-          <p class="card-text">
-            Moral implications, consent issues, and regulatory frameworks
-          </p>
-          <span class="badge bg-success rounded-pill">23 Active Threads</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card h-100 border-warning">
-        <div class="card-body">
-          <h3 class="h5 card-title">🔮 Future Speculation</h3>
-          <p class="card-text">
-            Emerging technologies, hypothetical scenarios, and long-term impacts
-          </p>
-          <span class="badge bg-warning rounded-pill">8 Active Threads</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Recent Discussions -->
-<div class="container mt-5">
-  <h2 class="h4 mb-4">🔥 Recent Discussions</h2>
-  <div class="row g-4">
-    <!-- Thread 1 -->
-    <div class="col-md-6">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <div class="d-flex justify-content-between mb-2">
-            <span class="badge bg-info" style="font-size: 0.75rem;">Technical</span>
-            <small class="text-muted">2 hours ago</small>
-          </div>
-          <h3 class="h5 card-title">CRISPR-Cas9 Delivery Methods Comparison</h3>
-          <p class="card-text">What's everyone's preferred delivery method for different tissue types?</p>
-          <div class="d-flex align-items-center">
-            <img src="https://i.pravatar.cc/150?img=5" alt="User" class="rounded-circle me-2" style="width:30px; height:30px;">
-            <span>Dr. Chen</span>
-            <span class="ms-auto">
-              <i class="bi bi-chat-square-text"></i> 14 replies
-            </span>
+            <h2 class="h5 mb-3">Add a Post (Anonymous)</h2>
+            <form id="postForm">
+              <div class="mb-3">
+                <input type="text" class="form-control" id="postTitle" placeholder="Title (optional)">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" id="postContent" rows="4" placeholder="What's on your mind?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Post</button>
+            </form>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Thread 2 -->
-    <div class="col-md-6">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <div class="d-flex justify-content-between mb-2">
-            <span class="badge bg-success" style="font-size: 0.75rem;">Ethics</span>
-            <small class="text-muted">5 hours ago</small>
-          </div>
-          <h3 class="h5 card-title">Germline Editing Moratorium - Necessary or Restrictive?</h3>
-          <p class="card-text">Should we maintain the current restrictions on heritable genome editing?</p>
-          <div class="d-flex align-items-center">
-            <img src="https://i.pravatar.cc/150?img=11" alt="User" class="rounded-circle me-2" style="width:30px; height:30px;">
-            <span>BioEthicist42</span>
-            <span class="ms-auto">
-              <i class="bi bi-chat-square-text"></i> 27 replies
-            </span>
-          </div>
+    <!-- Forum Posts List -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h3 class="mb-4" id="boardTitle">Recent Posts</h3>
+          <div id="postsList"></div>
         </div>
       </div>
     </div>
-
-    <!-- Thread 3 -->
-    <div class="col-md-6">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <div class="d-flex justify-content-between mb-2">
-            <span class="badge bg-warning" style="font-size: 0.75rem;">Future</span>
-            <small class="text-muted">1 day ago</small>
-          </div>
-          <h3 class="h5 card-title">Gene Drives for Conservation - Promising or Dangerous?</h3>
-          <p class="card-text">Could this technology help save endangered species or create ecological disasters?</p>
-
 
     <!-- Footer -->
     <footer class="text-center mt-5 py-3 bg-light">
       <p>&copy; 2025 BioCodeEthics</p>
     </footer>
 
-    <!-- Scripts -->
+    <script>
+      // List of boards
+      const boards = {
+        general: "General",
+        ethics: "Ethics & Society",
+        technology: "Technology & Science",
+        medicine: "Medical Applications",
+        future: "The Future"
+      };
+
+      // Get current board from dropdown
+      function getCurrentBoard() {
+        return document.getElementById('boardSelect').value;
+      }
+
+      // Load posts for the selected board
+      function loadPosts() {
+        const board = getCurrentBoard();
+        const posts = JSON.parse(localStorage.getItem('forumPosts_' + board) || '[]');
+        const postsList = document.getElementById('postsList');
+        postsList.innerHTML = '';
+        if (posts.length === 0) {
+          postsList.innerHTML = '<div class="text-muted">No posts yet. Be the first to post!</div>';
+          return;
+        }
+        posts.reverse().forEach(post => {
+          const postEl = document.createElement('div');
+          postEl.className = 'post-card p-3 mb-3 border';
+          postEl.innerHTML = `
+            <h5>${post.title ? post.title : '(No Title)'}</h5>
+            <p>${post.content.replace(/\n/g, '<br>')}</p>
+            <div class="post-author text-end">Anonymous &middot; <span title="${post.date}">${timeAgo(post.date)}</span></div>
+          `;
+          postsList.appendChild(postEl);
+        });
+      }
+
+      // Time ago function
+      function timeAgo(dateString) {
+        const now = new Date();
+        const posted = new Date(dateString);
+        const diff = Math.floor((now - posted) / 1000);
+        if (diff < 60) return 'just now';
+        if (diff < 3600) return `${Math.floor(diff/60)} min ago`;
+        if (diff < 86400) return `${Math.floor(diff/3600)} hr ago`;
+        return posted.toLocaleString();
+      }
+
+      // Handle post submission
+      document.getElementById('postForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const title = document.getElementById('postTitle').value.trim();
+        const content = document.getElementById('postContent').value.trim();
+        if (!content) return;
+        const post = {
+          title,
+          content,
+          date: new Date().toISOString()
+        };
+        const board = getCurrentBoard();
+        const postsKey = 'forumPosts_' + board;
+        const posts = JSON.parse(localStorage.getItem(postsKey) || '[]');
+        posts.push(post);
+        localStorage.setItem(postsKey, JSON.stringify(posts));
+        document.getElementById('postForm').reset();
+        loadPosts();
+      });
+
+      // Handle board change
+      document.getElementById('boardSelect').addEventListener('change', function() {
+        document.getElementById('boardTitle').innerText = boards[getCurrentBoard()] + " Board";
+        loadPosts();
+      });
+
+      // Initial load
+      document.addEventListener('DOMContentLoaded', function(){
+        document.getElementById('boardTitle').innerText = boards[getCurrentBoard()] + " Board";
+        loadPosts();
+      });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
