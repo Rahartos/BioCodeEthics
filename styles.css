@@ -92,3 +92,8 @@ p {
     color: white; /* Keep text color white */
 }
 
+#ethicalConcernsTabsContent p,
+#ethicalConcernsTabsContent ul li {
+    color: black !important; /* Force text color to black */
+}
+

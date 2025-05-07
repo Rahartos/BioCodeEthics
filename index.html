@@ -92,37 +92,374 @@
     </div>
 
 
-
-
-
-<!-- Gene Editing Benefits & Risks Section -->
+<!-- Ethical Concerns Section -->
 <div class="container mt-5">
-  <div class="row">
-    <!-- Benefits Box (Left) -->
-    <div class="col-md-6 mb-4 mb-md-0">
-      <div class="bg-success bg-opacity-10 p-4 border rounded shadow-sm h-100">
-        <h2 class="h5 text-success">🌱 Benefits of Gene Editing</h2>
-        <ul class="text-start mb-0">
-          <li><strong>Precision Medicine:</strong> Treat genetic diseases by targeting and correcting faulty genes.</li>
-          <li><strong>Disease Prevention:</strong> Prevent hereditary illnesses from being passed to future generations.</li>
-          <li><strong>Food Security:</strong> Create crops and livestock that are more resilient and nutritious.</li>
-          <li><strong>Scientific Discovery:</strong> Advance our understanding of genes and disease mechanisms.</li>
-          <li><strong>Potential for Longevity:</strong> Research into slowing aging and reducing risk of complex diseases.</li>
-        </ul>
+  <div class="bg-white p-4 border rounded shadow-sm" style="padding-bottom: 0;">
+    <h2 class="h4 mb-3">Ethical Considerations</h2>
+    <p>Below is a comprehensive exploration of the ethical considerations surrounding gene editing, categorized into three primary domains: Food, Animals, and Humans. Each section delves into the benefits and concerns, providing possible insights into each of the areas.</p>
+    <ul class="nav nav-tabs" id="ethicalConcernsTabs" role="tablist">
+      <!-- Food Tab -->
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="food-tab" data-bs-toggle="tab" data-bs-target="#food" type="button" role="tab" aria-controls="food" aria-selected="true">
+          Food
+        </button>
+      </li>
+      <!-- Animals Tab -->
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="animals-tab" data-bs-toggle="tab" data-bs-target="#animals" type="button" role="tab" aria-controls="animals" aria-selected="false">
+          Animals
+        </button>
+      </li>
+      <!-- Humans Tab -->
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="humans-tab" data-bs-toggle="tab" data-bs-target="#humans" type="button" role="tab" aria-controls="humans" aria-selected="false">
+          Humans
+        </button>
+      </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content mt-4" id="ethicalConcernsTabsContent">
+      <!-- Food Section -->
+      <div class="tab-pane fade show active" id="food" role="tabpanel" aria-labelledby="food-tab">
+        <p><strong>Food:</strong> Gene editing in agriculture raises concerns about biodiversity loss, unintended health effects, and corporate control over food systems. While it can improve crop resilience and nutrition, ethical questions remain about its long-term impact on ecosystems and food equity.</p>
+        <div class="row align-items-start">
+          <!-- Benefits Box (Left) -->
+          <div class="col-md-6">
+            <div class="bg-success bg-opacity-10 p-4 border rounded shadow-sm h-100 sticky-top" style="top: 70px;">
+              <h2 class="h5 text-success">Benefits</h2>
+              <div class="accordion" id="foodBenefitsAccordion">
+                <!-- Enhanced Crop Yields -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingCropYields">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCropYields" aria-expanded="false" aria-controls="collapseCropYields">
+                      Enhanced Crop Yields
+                    </button>
+                  </h2>
+                  <div id="collapseCropYields" class="accordion-collapse collapse" aria-labelledby="headingCropYields" data-bs-parent="#foodBenefitsAccordion">
+                    <div class="accordion-body">
+                      CRISPR technology enables precise modifications to genes that regulate plant growth and productivity. For instance, in rice and wheat, scientists have targeted genes like cytokinin oxidase/dehydrogenase (CKX), which degrade growth-promoting hormones. By knocking out these genes, plants exhibit increased tillering and grain production, leading to higher yields. In Australia, trials with gene-edited wheat aim for a 10% yield increase by modifying multiple genes simultaneously, showcasing the potential for significant productivity gains.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://inari.com/reuters-australian-trial-of-gene-edited-wheat-aims-for-10-bigger-yields/" target="_blank" rel="noopener">Australian trial of gene-edited wheat aims for 10% bigger yields</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Nutritional Enhancement -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingNutritionalEnhancement">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNutritionalEnhancement" aria-expanded="false" aria-controls="collapseNutritionalEnhancement">
+                      Nutritional Enhancement
+                    </button>
+                  </h2>
+                  <div id="collapseNutritionalEnhancement" class="accordion-collapse collapse" aria-labelledby="headingNutritionalEnhancement" data-bs-parent="#foodBenefitsAccordion">
+                    <div class="accordion-body">
+                      Gene editing facilitates the biofortification of crops, improving their nutritional profiles. CRISPR has been used to increase the content of essential nutrients such as vitamins, proteins, and healthy fats in various crops. For example, soybeans have been modified to contain higher levels of oleic acid, a heart-healthy monounsaturated fat. Additionally, efforts are underway to enhance vitamin A content in staple crops like rice, addressing micronutrient deficiencies in vulnerable populations.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://www.frontiersin.org/journals/genome-editing/articles/10.3389/fgeed.2022.850104/full" target="_blank" rel="noopener">Genome Editing for Improving Crop Nutrition</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Disease Resistance -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingDiseaseResistance">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiseaseResistance" aria-expanded="false" aria-controls="collapseDiseaseResistance">
+                      Disease Resistance
+                    </button>
+                  </h2>
+                  <div id="collapseDiseaseResistance" class="accordion-collapse collapse" aria-labelledby="headingDiseaseResistance" data-bs-parent="#foodBenefitsAccordion">
+                    <div class="accordion-body">
+                      CRISPR enables the development of crops with enhanced resistance to pathogens, reducing reliance on chemical pesticides. By editing genes associated with susceptibility, scientists have created varieties of rice, wheat, and tomatoes that are more resistant to bacterial, viral, and fungal infections. This not only improves crop yields but also contributes to environmental sustainability by decreasing pesticide usage.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8640848/" target="_blank" rel="noopener">Engineering Resistance Against Viruses in Field Crops Using CRISPR</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Climate Resilience -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingClimateResilience">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClimateResilience" aria-expanded="false" aria-controls="collapseClimateResilience">
+                      Climate Resilience
+                    </button>
+                  </h2>
+                  <div id="collapseClimateResilience" class="accordion-collapse collapse" aria-labelledby="headingClimateResilience" data-bs-parent="#foodBenefitsAccordion">
+                    <div class="accordion-body">
+                      Climate change poses significant challenges to agriculture, including increased temperatures and water scarcity. Gene editing offers solutions by developing crops that can withstand these stresses. For instance, CRISPR has been used to enhance drought tolerance in rice by modifying genes related to water use efficiency. Such advancements are crucial for maintaining food security in the face of changing environmental conditions.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://thericejournal.springeropen.com/articles/10.1186/s12284-023-00652-1" target="_blank" rel="noopener">CRISPR-Cas System, a Possible “Savior” of Rice Threatened by Climate Change</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Allergen Reduction -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingAllergenReduction">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAllergenReduction" aria-expanded="false" aria-controls="collapseAllergenReduction">
+                      Allergen Reduction
+                    </button>
+                  </h2>
+                  <div id="collapseAllergenReduction" class="accordion-collapse collapse" aria-labelledby="headingAllergenReduction" data-bs-parent="#foodBenefitsAccordion">
+                    <div class="accordion-body">
+                      Food allergies affect millions worldwide, and gene editing provides a pathway to develop hypoallergenic foods. CRISPR has been employed to reduce or eliminate allergenic proteins in crops like wheat, peanuts, and soybeans. By targeting specific genes responsible for allergen production, scientists aim to create safer food options for individuals with food sensitivities.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://www.frontiersin.org/journals/allergy/articles/10.3389/falgy.2021.821107/full" target="_blank" rel="noopener">New Frontiers: Precise Editing of Allergen Genes Using CRISPR</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Improved Shelf Life -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingImprovedShelfLife">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseImprovedShelfLife" aria-expanded="false" aria-controls="collapseImprovedShelfLife">
+                      Improved Shelf Life
+                    </button>
+                  </h2>
+                  <div id="collapseImprovedShelfLife" class="accordion-collapse collapse" aria-labelledby="headingImprovedShelfLife" data-bs-parent="#foodBenefitsAccordion">
+                    <div class="accordion-body">
+                      Post-harvest losses due to spoilage are a significant concern in the food supply chain. Gene editing has been used to extend the shelf life of fruits and vegetables by delaying processes like browning and softening. For example, CRISPR has been applied to develop non-browning mushrooms and longer-lasting tomatoes, reducing food waste and improving supply chain efficiency.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://www.thetimes.co.uk/article/gene-edited-foods-on-the-way-as-new-law-is-set-to-get-green-light-6bbsrm0qr" target="_blank" rel="noopener">Gene-edited superfruits that last for weeks heading for our shelves</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Precision Breeding -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingPrecisionBreeding">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePrecisionBreeding" aria-expanded="false" aria-controls="collapsePrecisionBreeding">
+                      Precision Breeding
+                    </button>
+                  </h2>
+                  <div id="collapsePrecisionBreeding" class="accordion-collapse collapse" aria-labelledby="headingPrecisionBreeding" data-bs-parent="#foodBenefitsAccordion">
+                    <div class="accordion-body">
+                      Traditional breeding methods are time-consuming and less precise. CRISPR accelerates the breeding process by enabling targeted modifications without introducing foreign DNA. This precision allows for the development of crops with desired traits, such as improved taste, texture, and nutritional content, in a shorter timeframe.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2023.1133036/full" target="_blank" rel="noopener">Plant breeding advancements with “CRISPR-Cas” genome editing technologies</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sustainable Farming Practices -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingSustainableFarming">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSustainableFarming" aria-expanded="false" aria-controls="collapseSustainableFarming">
+                      Sustainable Farming Practices
+                    </button>
+                  </h2>
+                  <div id="collapseSustainableFarming" class="accordion-collapse collapse" aria-labelledby="headingSustainableFarming" data-bs-parent="#foodBenefitsAccordion">
+                    <div class="accordion-body">
+                      Gene-edited crops can contribute to more sustainable agriculture by reducing the need for chemical inputs and enhancing resource use efficiency. For instance, crops engineered for improved nitrogen use can maintain high yields with less fertilizer, decreasing environmental pollution. Such innovations support the development of eco-friendly farming systems.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://pubmed.ncbi.nlm.nih.gov/35014191/" target="_blank" rel="noopener">CRISPR/Cas9 gene editing and natural variation analysis demonstrate the potential for HvARE1 in improvement of nitrogen use efficiency in barley</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Reduced Food Waste -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingReducedFoodWaste">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseReducedFoodWaste" aria-expanded="false" aria-controls="collapseReducedFoodWaste">
+                      Reduced Food Waste
+                    </button>
+                  </h2>
+                  <div id="collapseReducedFoodWaste" class="accordion-collapse collapse" aria-labelledby="headingReducedFoodWaste" data-bs-parent="#foodBenefitsAccordion">
+                    <div class="accordion-body">
+                      By enhancing traits like shelf life and disease resistance, gene-edited crops can significantly reduce food losses from farm to table. Longer-lasting produce and crops less susceptible to spoilage contribute to a more efficient food supply chain, addressing both economic and environmental concerns.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://pubmed.ncbi.nlm.nih.gov/33384412/" target="_blank" rel="noopener">Can gene editing reduce postharvest waste and loss of fruit, vegetables, and ornamentals?</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Accelerated Research and Development -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingAcceleratedResearch">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAcceleratedResearch" aria-expanded="false" aria-controls="collapseAcceleratedResearch">
+                      Accelerated Research and Development
+                    </button>
+                  </h2>
+                  <div id="collapseAcceleratedResearch" class="accordion-collapse collapse" aria-labelledby="headingAcceleratedResearch" data-bs-parent="#foodBenefitsAccordion">
+                    <div class="accordion-body">
+                      The precision and efficiency of CRISPR technology accelerate the research and development of new crop varieties. This rapid innovation cycle enables scientists to respond swiftly to emerging agricultural challenges, such as new pests or climate-related stresses, ensuring a resilient food system.
+                      <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                        Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9852743/" target="_blank" rel="noopener">A CRISPR way for accelerating cereal crop improvement</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+        <!-- Risks/Opposition Box (Right) -->
+        <div class="col-md-6">
+          <div class="bg-danger bg-opacity-10 p-4 border rounded shadow-sm h-100 sticky-top" style="top: 70px;">
+            <h2 class="h5 text-danger">Concerns</h2>
+            <div class="accordion" id="foodConcernsAccordion">
+              <!-- Unintended Genetic Consequences -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingUnintendedGeneticConsequences">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUnintendedGeneticConsequences" aria-expanded="false" aria-controls="collapseUnintendedGeneticConsequences">
+                    Unintended Genetic Consequences
+                  </button>
+                </h2>
+                <div id="collapseUnintendedGeneticConsequences" class="accordion-collapse collapse" aria-labelledby="headingUnintendedGeneticConsequences" data-bs-parent="#foodConcernsAccordion">
+                  <div class="accordion-body">
+                    Gene editing tools like CRISPR, while precise, can lead to unintended genetic changes. These off-target effects may result in unforeseen traits in crops, raising concerns about the safety and long-term impacts of consuming such foods. Ensuring thorough assessments is crucial to address these potential risks.
+                    <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                      Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7129066/" target="_blank" rel="noopener">Bioethical issues in genome editing by CRISPR-Cas9 technology</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Corporate Control and Farmer Dependency -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingCorporateControl">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCorporateControl" aria-expanded="false" aria-controls="collapseCorporateControl">
+                    Corporate Control and Farmer Dependency
+                  </button>
+                </h2>
+                <div id="collapseCorporateControl" class="accordion-collapse collapse" aria-labelledby="headingCorporateControl" data-bs-parent="#foodConcernsAccordion">
+                  <div class="accordion-body">
+                    The patenting of gene-edited seeds by large corporations can lead to monopolies, making farmers dependent on purchasing new seeds each season. This dynamic raises ethical concerns about the autonomy of farmers and the potential marginalization of small-scale agricultural producers.
+                    <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                      Source: <a href="https://prism.sustainability-directory.com/scenario/ethical-implications-of-gene-editing-in-agriculture-for-food-security/" target="_blank" rel="noopener">Ethical Implications of Gene Editing in Agriculture for Food Security</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Environmental Impact and Biodiversity Loss -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEnvironmentalImpact">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEnvironmentalImpact" aria-expanded="false" aria-controls="collapseEnvironmentalImpact">
+                    Environmental Impact and Biodiversity Loss
+                  </button>
+                </h2>
+                <div id="collapseEnvironmentalImpact" class="accordion-collapse collapse" aria-labelledby="headingEnvironmentalImpact" data-bs-parent="#foodConcernsAccordion">
+                  <div class="accordion-body">
+                    Gene-edited crops may inadvertently affect ecosystems, leading to reduced biodiversity. For instance, if such crops crossbreed with wild relatives, it could result in ecological imbalances. The long-term environmental consequences of widespread adoption of such crops are still not fully understood, necessitating cautious implementation.
+                    <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                      Source: <a href="https://www.foodethicscouncil.org/opinion/gene-editing-the-ethical-questions/" target="_blank" rel="noopener">Gene-editing: The ethical questions | Food Ethics Council</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Ethical Concerns Over 'Playing God' -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingPlayingGod">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlayingGod" aria-expanded="false" aria-controls="collapsePlayingGod">
+                    Ethical Concerns Over 'Playing God'
+                  </button>
+                </h2>
+                <div id="collapsePlayingGod" class="accordion-collapse collapse" aria-labelledby="headingPlayingGod" data-bs-parent="#foodConcernsAccordion">
+                  <div class="accordion-body">
+                    Altering the genetic makeup of organisms raises philosophical and ethical questions about human intervention in nature. Some argue that gene editing is an overreach, interfering with natural evolutionary processes and potentially leading to unforeseen consequences.
+                    <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                      Source: <a href="https://innovativegenomics.org/crisprpedia/crispr-ethics/" target="_blank" rel="noopener">CRISPR & Ethics - Innovative Genomics Institute (IGI)</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Lack of Informed Consumer Choice -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingConsumerChoice">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConsumerChoice" aria-expanded="false" aria-controls="collapseConsumerChoice">
+                    Lack of Informed Consumer Choice
+                  </button>
+                </h2>
+                <div id="collapseConsumerChoice" class="accordion-collapse collapse" aria-labelledby="headingConsumerChoice" data-bs-parent="#foodConcernsAccordion">
+                  <div class="accordion-body">
+                    In many regions, gene-edited foods are not labeled, limiting consumers' ability to make informed choices. This lack of transparency raises ethical issues about consumer rights and the importance of informed consent in food consumption.
+                    <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                      Source: <a href="https://www.foodethicscouncil.org/opinion/gene-editing-the-ethical-questions/" target="_blank" rel="noopener">Gene-editing: The ethical questions | Food Ethics Council</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Potential for Increased Inequality -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingInequality">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInequality" aria-expanded="false" aria-controls="collapseInequality">
+                    Potential for Increased Inequality
+                  </button>
+                </h2>
+                <div id="collapseInequality" class="accordion-collapse collapse" aria-labelledby="headingInequality" data-bs-parent="#foodConcernsAccordion">
+                  <div class="accordion-body">
+                    Access to gene-editing technologies is often limited to wealthier nations and corporations, potentially exacerbating global inequalities. This disparity raises ethical concerns about equitable access to technological advancements and the risk of widening the gap between developed and developing countries.
+                    <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                      Source: <a href="https://prism.sustainability-directory.com/scenario/ethical-implications-of-gene-editing-in-agriculture-for-food-security/" target="_blank" rel="noopener">Ethical Implications of Gene Editing in Agriculture for Food Security</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Regulatory Disparities and Trade Issues -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingRegulatoryDisparities">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRegulatoryDisparities" aria-expanded="false" aria-controls="collapseRegulatoryDisparities">
+                    Regulatory Disparities and Trade Issues
+                  </button>
+                </h2>
+                <div id="collapseRegulatoryDisparities" class="accordion-collapse collapse" aria-labelledby="headingRegulatoryDisparities" data-bs-parent="#foodConcernsAccordion">
+                  <div class="accordion-body">
+                    Different countries have varying regulations concerning gene-edited foods, leading to trade complications and ethical questions about the harmonization of food safety standards. For example, while some nations embrace gene-edited crops, others maintain strict regulations, affecting international food trade dynamics.
+                    <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                      Source: <a href="https://institute.global/insights/tech-and-digitalisation/gene-editing-food-production-charting-way-forward" target="_blank" rel="noopener">Gene Editing in Food Production: Charting a Way Forward</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Risk of Unintended Health Effects -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingHealthEffects">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHealthEffects" aria-expanded="false" aria-controls="collapseHealthEffects">
+                    Risk of Unintended Health Effects
+                  </button>
+                </h2>
+                <div id="collapseHealthEffects" class="accordion-collapse collapse" aria-labelledby="headingHealthEffects" data-bs-parent="#foodConcernsAccordion">
+                  <div class="accordion-body">
+                    While current studies indicate that gene-edited foods are safe for consumption, the long-term health effects remain uncertain. Continuous monitoring and research are necessary to detect any potential adverse effects that might emerge over time.
+                    <p class="text-muted mt-2" style="font-size: 0.875rem;">
+                      Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7129066/" target="_blank" rel="noopener">Bioethical issues in genome editing by CRISPR-Cas9 technology</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+
+      <!-- Animals Section -->
+      <div class="tab-pane fade" id="animals" role="tabpanel" aria-labelledby="animals-tab">
+        <p><strong>Animals:</strong> Editing animal genomes for agriculture or research purposes raises concerns about animal welfare, ecological balance, and unintended consequences. Ethical debates focus on whether the benefits justify the potential harm to animals and ecosystems.</p>
+      </div>
+
+      <!-- Humans Section -->
+      <div class="tab-pane fade" id="humans" role="tabpanel" aria-labelledby="humans-tab">
+        <p><strong>Humans:</strong> Gene editing in humans, especially germline editing, raises profound ethical concerns. These include the potential for unintended consequences, inequality in access, and the moral implications of altering human nature or creating "designer babies."</p>
       </div>
     </div>
-    <!-- Risks/Opposition Box (Right) -->
-    <div class="col-md-6">
-      <div class="bg-danger bg-opacity-10 p-4 border rounded shadow-sm h-100">
-        <h2 class="h5 text-danger">⚠️ Risks & Ethical Concerns</h2>
-        <ul class="text-start mb-0">
-          <li><strong>Unintended Effects:</strong> Off-target changes could cause new health problems.</li>
-          <li><strong>Inequality:</strong> Access may be limited, widening social and economic gaps.</li>
-          <li><strong>Biodiversity Loss:</strong> Reduced genetic diversity in crops, animals, or even humans.</li>
-          <li><strong>Ethical Dilemmas:</strong> Concerns about “designer babies” and altering human nature.</li>
-          </ul>
-        </div>
-      </div>
+  </div>
+</div>
 
 
 
