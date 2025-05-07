@@ -162,11 +162,58 @@
             </p>
           </div>
 
-
-
         </ul>
       </div>
 
+   
+   <!-- Dropdown List: Countries that have specifically banned gene editing -->
+<div class="container mt-4">
+  <div class="bg-white p-4 border rounded shadow-sm">
+    <label for="bannedCountriesDropdown" class="form-label h6 mb-3">Select a Country with a Specific Ban on Gene Editing:</label>
+    <select class="form-select" id="bannedCountriesDropdown" aria-label="Countries with gene editing bans">
+      <option selected disabled>Choose a country...</option>
+      <option value="china">🇨🇳 China</option>
+      <option value="usa">🇺🇸 United States</option>
+      <option value="eu">🇪🇺 European Union</option>
+      <option value="uk">🇬🇧 United Kingdom</option>
+      <option value="india">🇮🇳 India</option>
+      <option value="brazil">🇧🇷 Brazil</option>
+      <option value="japan">🇯🇵 Japan</option>
+      <option value="australia">🇦🇺 Australia</option>
+      <option value="canada">🇨🇦 Canada</option>
+   
+    </select>
+    <div id="countryBanInfo" class="mt-3" style="display:none; color:#111;"></div>
+  </div>
+</div>
+
+<script>
+  const countryInfo = {
+    china: "China: Banned germline editing in humans after controversy over the first gene-edited babies.",
+    usa: "United States: No federal ban, but strict regulations apply to human germline editing.",
+    eu: "European Union: Generally prohibits germline editing; regulations vary by country.",
+    uk: "United Kingdom: Allows somatic cell editing but bans germline modifications.",
+    india: "India: Prohibits human germline editing under the Indian Council of Medical Research guidelines.",
+    brazil: "Brazil: Bans human germline editing under its Biosecurity Law.",
+    japan: "Japan: Prohibits germline editing but allows somatic cell modifications under strict conditions.",
+    australia: "Australia: Bans human germline editing under the Gene Technology Act.",
+    canada: "Canada: Prohibits human germline editing under the Assisted Human Reproduction Act."
+    
+  };
+
+  document.getElementById('bannedCountriesDropdown').addEventListener('change', function() {
+    const infoDiv = document.getElementById('countryBanInfo');
+    const selected = this.value;
+    if (countryInfo[selected]) {
+      infoDiv.style.display = 'block';
+      infoDiv.textContent = countryInfo[selected];
+    } else {
+      infoDiv.style.display = 'none';
+      infoDiv.textContent = '';
+    }
+  });
+</script>
+ 
 
 
 
