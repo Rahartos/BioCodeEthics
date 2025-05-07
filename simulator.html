@@ -53,10 +53,245 @@
       </div>
     </nav>
 
-    <!-- Educational Content -->
+    <!-- Header -->
     <div class="container mt-5">
+      <div class="bg-light p-4 rounded shadow-sm text-center">
+        <h2 class="display-4">Simulator</h2>
+      </div>
+
+    <!-- Add the simulator part -->
+
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form onsubmit="simulateEdit(event)">
+            <div class="mb-3">
+              <label for="originalDNA" class="form-label">Original DNA Sequence</label>
+              <textarea class="form-control" id="originalDNA" rows="3" placeholder="e.g., ATCGGATACGTAGCTAGGATCGT"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="guideRNA" class="form-label">Guide RNA (Target to Cut)</label>
+              <input type="text" class="form-control" id="guideRNA" placeholder="e.g., TACGTA" />
+            </div>
+            <div class="mb-3">
+              <label for="editDNA" class="form-label">Edit DNA Sequence (Insert instead)</label>
+              <input type="text" class="form-control" id="editDNA" placeholder="e.g., GGGCCC" />
+            </div>
+            <button type="submit" class="btn btn-custom btn-lg w-100 mt-3">Simulate Edit</button>
+          </form>
+
+          <!-- Visual Output -->
+          <div class="mt-5 d-none" id="resultBox">
+            <h4>🔍 Visual Results</h4>
+            <p><strong>Original DNA:</strong></p>
+            <div class="dna-segment" id="originalVisual"></div>
+
+            <p class="mt-4"><strong>Edited DNA:</strong></p>
+            <div class="dna-segment" id="editedVisual"></div>
+          </div>
+          <div class="mt-4 d-none" id="mutationResult"></div>
+        </div>
+      </div>
+    </div>
+
+ 
+    </div>
+
+    <!-- INFORMATION HERE -->
+    <!-- Left and right top section -->
+    <div class="container mt-5">
+      <div class="row">
+        <!-- Left Section: How Does CRISPR Work -->
+        <div class="col-md-7">
+          <div class="bg-white p-4 border rounded shadow-sm">
+            <h2 class="mb-3">How Does CRISPR Work?</h2>
+            <p><strong>CRISPR/Cas9</strong> is a gene-editing tool that allows scientists to make precise changes to DNA. It uses a guide RNA to target a specific DNA sequence and a Cas9 protein to cut the DNA at the desired location.</p>
+            <p>Once the DNA is cut, the cell's natural repair mechanisms can be used to add, remove, or replace genetic material.</p>
+            
+            <h2 class="mb-3"> What is DNA?</h2>
+            <p><strong>DNA</strong> is the genetic blueprint of life, composed of four letters:</p>
+            <ul>
+              <li><strong>A</strong> = Adenine</li>
+              <li><strong>T</strong> = Thymine</li>
+              <li><strong>C</strong> = Cytosine</li>
+              <li><strong>G</strong> = Guanine</li>
+            </ul>
+            <p>Sequences like <code>ATCGGATACGTAGCTAGGATCGT</code> carry genetic information. CRISPR is a gene editing tool that targets a DNA segment using a guide RNA and replaces it with a new sequence.</p>
+            <p><strong>Example:</strong> CRISPR can replace <code>TACGTA</code> in your DNA with <code>GGGCCC</code>.</p>
+            
+            <div class="alert alert-info mt-4">
+              <strong>Try it below!</strong> Paste your own DNA sequence, choose your guide RNA, and insert an edit. On the left are some common genetic disorders and their mutations to get you started.
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section: Common Genetic Disorders -->
+        <div class="col-md-5">
+          <div class="bg-white p-4 border rounded shadow-sm">
+            <h3 class="text-center mb-4">Examples of Common Genetic Disorders</h3>
+            <ul class="nav nav-tabs" id="geneticDisordersTabs" role="tablist">
+              <!-- About Tab -->
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="true">
+                  About
+                </button>
+              </li>
+              <!-- Sickle Cell Anemia Tab -->
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="sickle-cell-tab" data-bs-toggle="tab" data-bs-target="#sickle-cell" type="button" role="tab" aria-controls="sickle-cell" aria-selected="false">
+                  Sickle Cell Anemia
+                </button>
+              </li>
+              <!-- Cystic Fibrosis Tab -->
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="cystic-fibrosis-tab" data-bs-toggle="tab" data-bs-target="#cystic-fibrosis" type="button" role="tab" aria-controls="cystic-fibrosis" aria-selected="false">
+                  Cystic Fibrosis
+                </button>
+              </li>
+              <!-- Huntington's Disease Tab -->
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="huntingtons-tab" data-bs-toggle="tab" data-bs-target="#huntingtons" type="button" role="tab" aria-controls="huntingtons" aria-selected="false">
+                  Huntington's Disease
+                </button>
+              </li>
+              <!-- Tay-Sachs Disease Tab -->
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tay-sachs-tab" data-bs-toggle="tab" data-bs-target="#tay-sachs" type="button" role="tab" aria-controls="tay-sachs" aria-selected="false">
+                  Tay-Sachs Disease
+                </button>
+              </li>
+              <!-- Beta Thalassemia Tab -->
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="beta-thalassemia-tab" data-bs-toggle="tab" data-bs-target="#beta-thalassemia" type="button" role="tab" aria-controls="beta-thalassemia" aria-selected="false">
+                  Beta Thalassemia
+                </button>
+              </li>
+              <!-- Duchenne Muscular Dystrophy Tab -->
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="duchenne-tab" data-bs-toggle="tab" data-bs-target="#duchenne" type="button" role="tab" aria-controls="duchenne" aria-selected="false">
+                  Duchenne Muscular Dystrophy
+                </button>
+              </li>
+              <!-- Marfan Syndrome Tab -->
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="marfan-tab" data-bs-toggle="tab" data-bs-target="#marfan" type="button" role="tab" aria-controls="marfan" aria-selected="false">
+                  Marfan Syndrome
+                </button>
+              </li>
+              <!-- Phenylketonuria Tab -->
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pku-tab" data-bs-toggle="tab" data-bs-target="#pku" type="button" role="tab" aria-controls="pku" aria-selected="false">
+                  Phenylketonuria (PKU)
+                </button>
+              </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content mt-4" id="geneticDisordersTabsContent">
+              <!-- About Genetic Disorders -->
+              <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+                <h3>About Genetic Disorders</h3>
+                <p>Genetic disorders are diseases caused by abnormalities in an individual's DNA. These abnormalities can result from mutations, deletions, or duplications of genes. Understanding these disorders is crucial for developing effective treatments and therapies.</p>
+            
+              </div>
+
+              <!-- Sickle Cell Anemia -->
+              <div class="tab-pane fade" id="sickle-cell" role="tabpanel" aria-labelledby="sickle-cell-tab">
+                <p><strong>Sickle Cell Anemia:</strong> A disorder affecting red blood cells.</p>
+                
+                <strong>Gene:</strong> HBB (Beta-globin gene)<br>
+                <strong>Mutation:</strong> A single nucleotide substitution (GAG → GTG)<br>
+                <strong>Wild Type:</strong> GTG CAC CTG ACT CCT <u>GAG</u> GAG<br>
+                <strong>Mutant:</strong> GTG CAC CTG ACT CCT <u>GTG</u> GAG<br>
+                <strong>Effect:</strong> Glutamic acid (GAG) → Valine (GTG)
+              </div>
+
+              <!-- Cystic Fibrosis -->
+              <div class="tab-pane fade" id="cystic-fibrosis" role="tabpanel" aria-labelledby="cystic-fibrosis-tab">
+                <p><strong>Cystic Fibrosis:</strong> A condition that impacts the lungs and digestive system.</p>
+                  
+                <strong>Gene:</strong> CFTR<br>
+                <strong>Mutation:</strong> ΔF508 — deletion of 3 nucleotides<br>
+                <strong>Normal:</strong> ATC ATC <u>TTT</u> GGT GTT<br>
+                <strong>Mutant:</strong> ATC ATC ___ GGT GTT<br>
+                <strong>Effect:</strong> Loss of phenylalanine at position 508
+              </div>
+
+              <!-- Huntington's Disease -->
+              <div class="tab-pane fade" id="huntingtons" role="tabpanel" aria-labelledby="huntingtons-tab">
+                <p><strong>Huntington's Disease:</strong> A progressive brain disorder caused by a genetic mutation.</p>
+                  
+                <strong>Gene:</strong> HTT<br>
+                <strong>Mutation:</strong> Trinucleotide repeat (CAG)<br>
+                <strong>Normal:</strong> ...CAG CAG CAG... (≤35 repeats)<br>
+                <strong>Mutant:</strong> ...CAG CAG CAG CAG CAG... (≥36 repeats)<br>
+                <strong>Effect:</strong> Protein misfolding due to repeat expansion
+              </div>
+
+              <!-- Tay-Sachs Disease -->
+              <div class="tab-pane fade" id="tay-sachs" role="tabpanel" aria-labelledby="tay-sachs-tab">
+                <p><strong>Tay-Sachs Disease:</strong> A rare inherited disorder that destroys nerve cells in the brain and spinal cord.</p>
+                
+                <strong>Gene:</strong> HEXA<br>
+                <strong>Mutation:</strong> 4 bp insertion (TATC) in exon 11<br>
+                <strong>Normal:</strong> ...CTG GGT GAG...<br>
+                <strong>Mutant:</strong> ...CTG <u>TATC</u> GGT GAG...<br>
+                <strong>Effect:</strong> Frameshift causing early stop codon
+              </div>
+
+              <!-- Beta Thalassemia -->
+              <div class="tab-pane fade" id="beta-thalassemia" role="tabpanel" aria-labelledby="beta-thalassemia-tab">
+                <p><strong>Beta Thalassemia:</strong> A blood disorder that reduces the production of hemoglobin.</p>
+                
+                <strong>Gene:</strong> HBB<br>
+                <strong>Mutation:</strong> Premature stop codon (TAG)<br>
+                <strong>Wild Type:</strong> ATG GTG CAC CTG ACT CCT <u>GAG</u> GAG<br>
+                <strong>Mutant:</strong> ATG GTG CAC CTG ACT CCT <u>TAG</u> GAG<br>
+                <strong>Effect:</strong> Reduces hemoglobin production
+              </div>
+
+              <!-- Duchenne Muscular Dystrophy -->
+              <div class="tab-pane fade" id="duchenne" role="tabpanel" aria-labelledby="duchenne-tab">
+                <p><strong>Duchenne Muscular Dystrophy:</strong> A genetic disorder characterized by progressive muscle degeneration.</p>
+                
+                <strong>Gene:</strong> DMD<br>
+                <strong>Mutation:</strong> Deletion of codon (GAA)<br>
+                <strong>Wild Type:</strong> ATG GAA GAA GAA GAA GAA<br>
+                <strong>Mutant:</strong> ATG GAA GAA ___ GAA GAA<br>
+                <strong>Effect:</strong> Disrupts dystrophin protein production
+              </div>
+
+              <!-- Marfan Syndrome -->
+              <div class="tab-pane fade" id="marfan" role="tabpanel" aria-labelledby="marfan-tab">
+                <p><strong>Marfan Syndrome:</strong> A connective tissue disorder affecting the heart, eyes, and skeleton.</p>
+                
+                <strong>Gene:</strong> FBN1<br>
+                <strong>Mutation:</strong> Premature stop codon (TGA)<br>
+                <strong>Wild Type:</strong> GGT GGA GGA GGA GGA<br>
+                <strong>Mutant:</strong> GGT GGA GGA <u>TGA</u> GGA<br>
+                <strong>Effect:</strong> Affects connective tissue integrity
+              </div>
+
+              <!-- Phenylketonuria (PKU) -->
+              <div class="tab-pane fade" id="pku" role="tabpanel" aria-labelledby="pku-tab">
+                <p><strong>Phenylketonuria (PKU):</strong> A metabolic disorder that affects the body's ability to process phenylalanine.</p>
+              
+                <strong>Gene:</strong> PAH<br>
+                <strong>Mutation:</strong> Stop codon (TAA)<br>
+                <strong>Wild Type:</strong> ATG GAA TTT GAA GAA<br>
+                <strong>Mutant:</strong> ATG GAA TTT <u>TAA</u> GAA<br>
+                <strong>Effect:</strong> Disrupts phenylalanine hydroxylase function
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Educational Content -->
+    <!-- <div class="container mt-5">
       <div class="bg-white p-4 border rounded shadow-sm">
-        <h2 class="mb-3">🔬 What is DNA and How Does CRISPR Work?</h2>
+        <h2 class="mb-3">🔬 What is DNA?</h2>
         <p><strong>DNA</strong> is the genetic blueprint of life, composed of four letters:</p>
         <ul>
           <li><strong>A</strong> = Adenine</li>
@@ -70,10 +305,10 @@
           <strong>Try it below!</strong> Paste your own DNA sequence, choose your guide RNA, and insert an edit.
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Simulator Form -->
-    <div class="container mt-5">
+    <!-- <div class="container mt-5">
       <div class="row justify-content-center">
         <div class="col-md-8">
           <form onsubmit="simulateEdit(event)">
@@ -92,7 +327,7 @@
             <button type="submit" class="btn btn-primary w-100">Simulate Edit</button>
           </form>
 
-          <!-- Visual Output -->
+         
           <div class="mt-5 d-none" id="resultBox">
             <h4>🔍 Visual Results</h4>
             <p><strong>Original DNA:</strong></p>
@@ -101,76 +336,12 @@
             <p class="mt-4"><strong>Edited DNA:</strong></p>
             <div class="dna-segment" id="editedVisual"></div>
           </div>
+          <div class="mt-4 d-none" id="mutationResult"></div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <!-- Genetic Disorders Content -->
-    <div class="container mt-5">
-      <h2 class="text-center mb-4">Common Genetic Disorders</h2>
-      <ul class="nav nav-tabs" id="geneticDisordersTabs" role="tablist">
-        <!-- Tab Links -->
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="sickle-cell-tab" data-bs-toggle="tab" data-bs-target="#sickle-cell" type="button" role="tab" aria-controls="sickle-cell" aria-selected="true">
-            Sickle Cell Anemia
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="cystic-fibrosis-tab" data-bs-toggle="tab" data-bs-target="#cystic-fibrosis" type="button" role="tab" aria-controls="cystic-fibrosis" aria-selected="false">
-            Cystic Fibrosis
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="huntingtons-tab" data-bs-toggle="tab" data-bs-target="#huntingtons" type="button" role="tab" aria-controls="huntingtons" aria-selected="false">
-            Huntington's Disease
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="tay-sachs-tab" data-bs-toggle="tab" data-bs-target="#tay-sachs" type="button" role="tab" aria-controls="tay-sachs" aria-selected="false">
-            Tay-Sachs Disease
-          </button>
-        </li>
-      </ul>
-
-      <!-- Tab Content -->
-      <div class="tab-content mt-4" id="geneticDisordersTabsContent">
-        <!-- Sickle Cell Anemia -->
-        <div class="tab-pane fade show active" id="sickle-cell" role="tabpanel" aria-labelledby="sickle-cell-tab">
-          <strong>Gene:</strong> HBB (Beta-globin gene)<br>
-          <strong>Mutation:</strong> A single nucleotide substitution (GAG → GTG)<br>
-          <strong>Wild Type:</strong> GTG CAC CTG ACT CCT <u>GAG</u> GAG<br>
-          <strong>Mutant:</strong> GTG CAC CTG ACT CCT <u>GTG</u> GAG<br>
-          <strong>Effect:</strong> Glutamic acid (GAG) → Valine (GTG)
-        </div>
-
-        <!-- Cystic Fibrosis -->
-        <div class="tab-pane fade" id="cystic-fibrosis" role="tabpanel" aria-labelledby="cystic-fibrosis-tab">
-          <strong>Gene:</strong> CFTR<br>
-          <strong>Mutation:</strong> ΔF508 — deletion of 3 nucleotides<br>
-          <strong>Normal:</strong> ATC ATC <u>TTT</u> GGT GTT<br>
-          <strong>Mutant:</strong> ATC ATC ___ GGT GTT<br>
-          <strong>Effect:</strong> Loss of phenylalanine at position 508
-        </div>
-
-        <!-- Huntington's Disease -->
-        <div class="tab-pane fade" id="huntingtons" role="tabpanel" aria-labelledby="huntingtons-tab">
-          <strong>Gene:</strong> HTT<br>
-          <strong>Mutation:</strong> Trinucleotide repeat (CAG)<br>
-          <strong>Normal:</strong> ...CAG CAG CAG... (≤35 repeats)<br>
-          <strong>Mutant:</strong> ...CAG CAG CAG CAG CAG... (≥36 repeats)<br>
-          <strong>Effect:</strong> Protein misfolding due to repeat expansion
-        </div>
-
-        <!-- Tay-Sachs Disease -->
-        <div class="tab-pane fade" id="tay-sachs" role="tabpanel" aria-labelledby="tay-sachs-tab">
-          <strong>Gene:</strong> HEXA<br>
-          <strong>Mutation:</strong> 4 bp insertion (TATC) in exon 11<br>
-          <strong>Normal:</strong> ...CTG GGT GAG...<br>
-          <strong>Mutant:</strong> ...CTG <u>TATC</u> GGT GAG...<br>
-          <strong>Effect:</strong> Frameshift causing early stop codon
-        </div>
-      </div>
-    </div>
+    
 
     <!-- Footer -->
     <footer class="text-center mt-5 py-3 bg-light">
@@ -180,6 +351,81 @@
     <!-- Bootstrap & Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+      const mutations = [
+        {
+          name: "Sickle Cell Anemia",
+          gene: "HBB",
+          wildType: "GTG CAC CTG ACT CCT GAG GAG",
+          mutant: "GTG CAC CTG ACT CCT GTG GAG",
+          guide: "GTG",
+          edit: "GAG",
+          description: "Valine (GTG) → Glutamic acid (GAG)",
+        },
+        {
+          name: "Cystic Fibrosis",
+          gene: "CFTR",
+          wildType: "ATC ATC TTT GGT GTT",
+          mutant: "ATC ATC ___ GGT GTT",
+          guide: "___",
+          edit: "TTT",
+          description: "Restores phenylalanine at position 508",
+        },
+        {
+          name: "Huntington's Disease",
+          gene: "HTT",
+          wildType: "...CAG CAG CAG...",
+          mutant: "...CAG CAG CAG CAG CAG...",
+          guide: "CAG CAG CAG CAG CAG",
+          edit: "CAG CAG CAG",
+          description: "Reduces CAG repeats to normal levels",
+        },
+        {
+          name: "Tay-Sachs Disease",
+          gene: "HEXA",
+          wildType: "...CTG GGT GAG...",
+          mutant: "...CTG TATC GGT GAG...",
+          guide: "TATC",
+          edit: "",
+          description: "Removes frameshift mutation",
+        },
+        {
+          name: "Beta Thalassemia",
+          gene: "HBB",
+          wildType: "ATG GTG CAC CTG ACT CCT GAG GAG",
+          mutant: "ATG GTG CAC CTG ACT CCT TAG GAG",
+          guide: "TAG",
+          edit: "GAG",
+          description: "Restores normal beta-globin gene function",
+        },
+        {
+          name: "Duchenne Muscular Dystrophy",
+          gene: "DMD",
+          wildType: "ATG GAA GAA GAA GAA GAA",
+          mutant: "ATG GAA GAA ___ GAA GAA",
+          guide: "___",
+          edit: "GAA",
+          description: "Restores dystrophin protein production",
+        },
+        {
+          name: "Marfan Syndrome",
+          gene: "FBN1",
+          wildType: "GGT GGA GGA GGA GGA",
+          mutant: "GGT GGA GGA TGA GGA",
+          guide: "TGA",
+          edit: "GGA",
+          description: "Corrects premature stop codon in FBN1 gene",
+        },
+        {
+          name: "Phenylketonuria (PKU)",
+          gene: "PAH",
+          wildType: "ATG GAA TTT GAA GAA",
+          mutant: "ATG GAA TTT TAA GAA",
+          guide: "TAA",
+          edit: "GAA",
+          description: "Restores phenylalanine hydroxylase function",
+        },
+      ];
+
       function highlightDNA(sequence, match, className) {
         let result = "";
         let i = 0;
@@ -212,6 +458,7 @@
           return;
         }
 
+        // Replace only the first occurrence of the guide RNA
         const edited = original.replace(guide, edit);
         const originalVisual = highlightDNA(original, guide, "guide-rna");
         const editedVisual = highlightDNA(edited, edit, "edit-seq");
@@ -219,6 +466,20 @@
         document.getElementById("originalVisual").innerHTML = originalVisual;
         document.getElementById("editedVisual").innerHTML = editedVisual;
         resultBox.classList.remove("d-none");
+
+        // Check if the edit undoes a known mutation
+        const mutation = mutations.find(
+          (m) => m.mutant === original && m.wildType === edited
+        );
+
+        const mutationResult = document.getElementById("mutationResult");
+        if (mutation) {
+          mutationResult.innerHTML = `<strong>Mutation Undone:</strong> ${mutation.name} - ${mutation.description}`;
+          mutationResult.classList.remove("d-none");
+        } else {
+          mutationResult.innerHTML = `<strong>No known mutation undone.</strong>`;
+          mutationResult.classList.remove("d-none");
+        }
       }
     </script>
   </body>
